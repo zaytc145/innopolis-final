@@ -1,6 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 import styled from "styled-components";
-import {LOGIN, PROFILE, TODOS} from "../routes/routerLinks";
+import {LOGIN, LOGS, PROFILE, TODOS} from "../routes/routerLinks";
 import useAuth from "../context/AuthContext/useAuth";
 import {FC, useCallback} from "react";
 
@@ -17,6 +17,7 @@ const ContentWrapper = styled.div`
   padding: 20px;
   display: flex;
   justify-content: center;
+  text-align: center;
 `
 
 const Default: FC = () => {
@@ -31,8 +32,9 @@ const Default: FC = () => {
         <Header>
             {!user && <Link to={LOGIN}>Login</Link>}
             {user && <>
-                <Link to={PROFILE}>Profile</Link>
                 <Link to={TODOS}>Todos</Link>
+                <Link to={PROFILE}>Profile</Link>
+                <Link to={LOGS}>Logs</Link>
                 <Link onClick={logout} to={""}>Logout</Link>
             </>}
         </Header>

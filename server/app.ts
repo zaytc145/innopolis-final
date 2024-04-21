@@ -8,8 +8,8 @@ import {User} from "./models/User";
 import {UserInfo} from "./models/UserInfo";
 import {Log} from "./models/Log";
 import {Todo} from "./models/Todo";
-import TodoStatusEnum from "./enums/TodoStatusEnum";
 import {ObjectId} from "mongodb";
+import TodoStatusEnum from "./enums/TodoStatusEnum";
 
 const port = 3001
 const app = express()
@@ -36,7 +36,7 @@ app.get('/logs', async (req, res) => {
 })
 
 app.post('/logs', async (req, res) => {
-    const {user, type, text} = req.body;
+    const {type, text} = req.body;
 
     const log = new Log();
     log.date = new Date();
@@ -60,7 +60,6 @@ app.get('/todos', async (req, res) => {
 
 app.post('/todos', async (req, res) => {
     const {title, user} = req.body
-
     const todo = new Todo();
     todo.status = TodoStatusEnum.IN_PROGRESS;
     todo.title = title;
@@ -70,15 +69,33 @@ app.post('/todos', async (req, res) => {
     return res.status(200).send(todo)
 })
 
+app.get('/todos/:id', async (req, res) => {
+    const {id} = req.params
+
+    const todo = await Todo.findOneByOrFail({_id: new ObjectId(id)});
+
+    return res.status(200).send(todo)
+})
+
 app.put('/todos/:id', async (req, res) => {
-    const {status} = req.body
+    const {status, title} = req.body
     const {id} = req.params
 
     const todo = await Todo.findOneByOrFail({_id: new ObjectId(id)});
     todo.status = status;
+    todo.title = title;
     await todo.save();
 
     return res.status(200).send(todo)
+})
+
+app.delete('/todos/:id', async (req, res) => {
+    const {id} = req.params
+
+    const todo = await Todo.findOneByOrFail({_id: new ObjectId(id)});
+    await todo.remove();
+
+    return res.status(200).send(true)
 })
 
 app.listen(port, () => {

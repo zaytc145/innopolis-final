@@ -17,7 +17,7 @@ export class Log extends BaseEntity {
     _id: ObjectId;
 
     @ManyToOne(() => User)
-    user: User
+    user: string
 
     @Column("text")
     text: string
