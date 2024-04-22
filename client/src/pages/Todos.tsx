@@ -2,7 +2,7 @@ import {ChangeEvent, FC, useEffect, useState} from "react";
 import Card from "../components/Card";
 import styled from "styled-components";
 import Todo from "../types/Todo";
-import api from "../api";
+import api from "../api/api";
 import useAuth from "../context/AuthContext/useAuth";
 import Button from "../components/Button";
 import {Link} from "react-router-dom";

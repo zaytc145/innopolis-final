@@ -2,7 +2,7 @@ import Card from "../components/Card";
 import {FC, FormEvent, useCallback, useState} from "react";
 import FormGroup from "../components/FormGroup";
 import Button from "../components/Button";
-import api from "../api";
+import api from "../api/api";
 import {useNavigate} from "react-router-dom";
 import {TODOS} from "../routes/routerLinks";
 import useAuth from "../context/AuthContext/useAuth";

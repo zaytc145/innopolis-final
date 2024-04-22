@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Log from "../types/Log";
 import Table from "../components/Table";
 import TableTh from "../components/TableTh";
-import api from "../api";
+import api from "../api/api";
 
 const Logs = () => {
 

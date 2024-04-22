@@ -3,7 +3,7 @@ import FormGroup from "../components/FormGroup";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import useAuth from "../context/AuthContext/useAuth";
-import api from "../api";
+import api from "../api/api";
 import {useNavigate} from "react-router-dom";
 import {TODOS} from "../routes/routerLinks";
 import {eventsLogger} from "../App";

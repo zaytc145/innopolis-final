@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import axios from "axios";
-import api from "../api";
+import api from "../api/api";
 import useAuth from "../context/AuthContext/useAuth";
 import Card from "../components/Card";
 import UserInfo from "../types/UserInfo";
