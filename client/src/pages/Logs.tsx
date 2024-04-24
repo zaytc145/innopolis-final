@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import Log from "../types/Log";
-import Table from "../components/Table";
-import TableTh from "../components/TableTh";
-import api from "../api/api";
+import Log from "../types/Log.ts";
+import Table from "../components/Table.tsx";
+import TableTh from "../components/TableTh.tsx";
+import api from "../api/api.ts";
 
 const Logs = () => {
 

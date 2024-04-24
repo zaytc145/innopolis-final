@@ -1,6 +1,6 @@
-import AuthContext from "../context/AuthContext/AuthContext";
+import AuthContext from "../context/AuthContext/AuthContext.ts";
 import {ReactNode, useState} from "react";
-import User from "../types/User";
+import User from "../types/User.ts";
 
 interface Props {
     children: ReactNode;

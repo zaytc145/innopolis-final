@@ -1,17 +1,17 @@
 import {ChangeEvent, FC, useEffect, useState} from "react";
-import Card from "../components/Card";
+import Card from "../components/Card.tsx";
 import styled from "styled-components";
-import Todo from "../types/Todo";
-import api from "../api/api";
-import useAuth from "../context/AuthContext/useAuth";
-import Button from "../components/Button";
+import Todo from "../types/Todo.ts";
+import api from "../api/api.ts";
+import useAuth from "../context/AuthContext/useAuth.ts";
+import Button from "../components/Button.tsx";
 import {Link} from "react-router-dom";
-import {getTodoEditLink, TODOS_CREATE} from "../routes/routerLinks";
-import TodoStatusEnum from "../enums/TodoStatusEnum";
-import Table from "../components/Table";
-import TableTh from "../components/TableTh";
-import {eventsLogger} from "../App";
-import LogTypeEnum from "../enums/LogTypeEnum";
+import {getTodoEditLink, TODOS_CREATE} from "../routes/routerLinks.ts";
+import TodoStatusEnum from "../enums/TodoStatusEnum.ts";
+import Table from "../components/Table.tsx";
+import TableTh from "../components/TableTh.tsx";
+import {eventsLogger} from "../App.tsx";
+import LogTypeEnum from "../enums/LogTypeEnum.ts";
 
 const StyledTableActions = styled.div`
   display: flex;

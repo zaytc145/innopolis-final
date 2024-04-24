@@ -1,13 +1,13 @@
-import Card from "../components/Card";
+import Card from "../components/Card.tsx";
 import {FC, FormEvent, useCallback, useState} from "react";
-import FormGroup from "../components/FormGroup";
-import Button from "../components/Button";
-import api from "../api/api";
+import FormGroup from "../components/FormGroup.tsx";
+import Button from "../components/Button.tsx";
+import api from "../api/api.ts";
 import {useNavigate} from "react-router-dom";
-import {TODOS} from "../routes/routerLinks";
-import useAuth from "../context/AuthContext/useAuth";
-import LogTypeEnum from "../enums/LogTypeEnum";
-import {eventsLogger} from "../App";
+import {TODOS} from "../routes/routerLinks.ts";
+import useAuth from "../context/AuthContext/useAuth.ts";
+import LogTypeEnum from "../enums/LogTypeEnum.ts";
+import {eventsLogger} from "../App.tsx";
 
 const Login: FC = () => {
 

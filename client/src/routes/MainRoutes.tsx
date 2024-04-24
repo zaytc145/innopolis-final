@@ -1,15 +1,15 @@
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import Login from "../pages/Login";
-import Empty from "../pages/Empty";
-import {LOGIN, LOGS, PROFILE, TODOS, TODOS_CREATE, TODOS_UPDATE} from "./routerLinks";
-import Default from "../layouts/Default";
-import Todos from "../pages/Todos";
-import Profile from "../pages/Profile";
-import CreateTodo from "../pages/CreateTodo";
-import useAuth from "../context/AuthContext/useAuth";
+import Login from "../pages/Login.tsx";
+import Empty from "../pages/Empty.tsx";
+import {LOGIN, LOGS, PROFILE, TODOS, TODOS_CREATE, TODOS_UPDATE} from "./routerLinks.ts";
+import Default from "../layouts/Default.tsx";
+import Todos from "../pages/Todos.tsx";
+import Profile from "../pages/Profile.tsx";
+import CreateTodo from "../pages/CreateTodo.tsx";
+import useAuth from "../context/AuthContext/useAuth.ts";
 import {ReactElement} from "react";
-import Logs from "../pages/Logs";
-import UpdateTodo from "../pages/UpdateTodo";
+import Logs from "../pages/Logs.tsx";
+import UpdateTodo from "../pages/UpdateTodo.tsx";
 
 
 const MainRoutes = () => {

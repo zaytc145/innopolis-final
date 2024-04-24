@@ -1,11 +1,10 @@
 import {FC, useEffect, useState} from "react";
-import axios from "axios";
-import api from "../api/api";
-import useAuth from "../context/AuthContext/useAuth";
-import Card from "../components/Card";
-import UserInfo from "../types/UserInfo";
-import {eventsLogger} from "../App";
-import LogTypeEnum from "../enums/LogTypeEnum";
+import api from "../api/api.ts";
+import useAuth from "../context/AuthContext/useAuth.ts";
+import Card from "../components/Card.tsx";
+import UserInfo from "../types/UserInfo.ts";
+import {eventsLogger} from "../App.tsx";
+import LogTypeEnum from "../enums/LogTypeEnum.ts";
 
 const Profile: FC = () => {
     const {user} = useAuth();

@@ -1,13 +1,13 @@
 import {FC, FormEvent, useCallback, useState} from "react";
-import FormGroup from "../components/FormGroup";
-import Button from "../components/Button";
-import Card from "../components/Card";
-import useAuth from "../context/AuthContext/useAuth";
-import api from "../api/api";
+import FormGroup from "../components/FormGroup.tsx";
+import Button from "../components/Button.tsx";
+import Card from "../components/Card.tsx";
+import useAuth from "../context/AuthContext/useAuth.ts";
+import api from "../api/api.ts";
 import {useNavigate} from "react-router-dom";
-import {TODOS} from "../routes/routerLinks";
-import {eventsLogger} from "../App";
-import LogTypeEnum from "../enums/LogTypeEnum";
+import {TODOS} from "../routes/routerLinks.ts";
+import {eventsLogger} from "../App.tsx";
+import LogTypeEnum from "../enums/LogTypeEnum.ts";
 
 const CreateTodo: FC = () => {
 

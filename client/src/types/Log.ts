@@ -1,5 +1,5 @@
-import LogTypeEnum from "../../../server/enums/LogTypeEnum";
-import User from "./User";
+import LogTypeEnum from "../enums/LogTypeEnum";
+import User from "./User.ts";
 
 export default interface Log {
     _id: number;

@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react";
-import Login from "../pages/Login";
+import Login from "../../pages/Login.tsx";
+import {expect, test} from "vitest";
 
 test('login form is displayed', async () => {
     render(<Login/>)

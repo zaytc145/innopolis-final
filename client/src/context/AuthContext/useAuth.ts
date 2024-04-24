@@ -1,6 +1,6 @@
 import {useCallback, useContext} from "react";
-import AuthContext from "./AuthContext";
-import User from "../../types/User";
+import AuthContext from "./AuthContext.ts";
+import User from "../../types/User.ts";
 
 const useAuth = () => {
     const {user, setUser} = useContext(AuthContext);

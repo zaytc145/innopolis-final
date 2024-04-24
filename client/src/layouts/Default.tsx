@@ -1,7 +1,7 @@
 import {Link, Outlet} from "react-router-dom";
 import styled from "styled-components";
-import {LOGIN, LOGS, PROFILE, TODOS} from "../routes/routerLinks";
-import useAuth from "../context/AuthContext/useAuth";
+import {LOGIN, LOGS, PROFILE, TODOS} from "../routes/routerLinks.ts";
+import useAuth from "../context/AuthContext/useAuth.ts";
 import {FC, useCallback} from "react";
 
 const Header = styled.div`

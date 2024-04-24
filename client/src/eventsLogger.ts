@@ -1,5 +1,5 @@
-import api from "./api/api";
-import LogTypeEnum from "./enums/LogTypeEnum";
+import api from "./api/api.ts";
+import LogTypeEnum from "./enums/LogTypeEnum.ts";
 
 interface Payload {
     type: LogTypeEnum,

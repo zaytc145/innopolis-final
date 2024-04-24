@@ -1,4 +1,4 @@
-import TodoStatusEnum from "../../../server/enums/TodoStatusEnum";
+import TodoStatusEnum from "../enums/TodoStatusEnum";
 
 export default interface Todo {
     title: string;
