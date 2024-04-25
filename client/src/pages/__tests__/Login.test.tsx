@@ -13,8 +13,8 @@ test('login form is displayed', async () => {
 
 test('typing is working', async () => {
     render(<Login/>)
-    const emailInputNode = screen.getByLabelText("Email");
-    const passwordInputNode = screen.getByLabelText("Password");
+    const emailInputNode = screen.getByLabelText("Email") as HTMLInputElement;
+    const passwordInputNode = screen.getByLabelText("Password") as HTMLInputElement;
 
     fireEvent.change(emailInputNode, { target: {value: "test@test.ru" }});
     expect(emailInputNode.value).toMatch("test@test.ru");
