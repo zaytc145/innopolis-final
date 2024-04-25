@@ -2,7 +2,7 @@ import {FC, ReactNode} from "react";
 import styled from "styled-components";
 
 interface Props {
-    children: ReactNode
+    children?: ReactNode
 }
 
 const StyledTable = styled.table`
