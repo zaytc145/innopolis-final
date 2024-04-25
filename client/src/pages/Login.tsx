@@ -43,13 +43,28 @@ const Login: FC = () => {
         <form onSubmit={onSubmit}>
             <h2>Login</h2>
             <FormGroup>
-                <label>Email</label>
-                <input name={"email"} type={"email"} placeholder="Email" required onInput={(e) => setEmail(e.currentTarget.value)}/>
+                <label htmlFor={"email"}>Email</label>
+                <input
+                    id={"email"}
+                    name={"email"}
+                    type={"email"}
+                    placeholder="Email"
+                    required
+                    onInput={(e) => setEmail(e.currentTarget.value)}
+                />
             </FormGroup>
+
             <FormGroup>
-                <label>Password</label>
-                <input name={"password"} type={"password"} placeholder="Password" required
-                       onInput={(e) => setPassword(e.currentTarget.value)}/>
+                <label htmlFor={"password"}>Password</label>
+                <input
+                    id={"password"}
+                    name={"password"}
+                    type={"password"}
+                    placeholder="Password"
+                    required
+                    autoComplete="current-password"
+                    onInput={(e) => setPassword(e.currentTarget.value)}
+                />
             </FormGroup>
             <Button type={"submit"}>Login</Button>
         </form>
